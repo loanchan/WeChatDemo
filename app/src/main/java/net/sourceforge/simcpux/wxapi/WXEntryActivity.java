@@ -1,6 +1,7 @@
 package net.sourceforge.simcpux.wxapi;
 
 
+import com.facebook.stetho.Stetho;
 import com.tencent.mm.sdk.openapi.BaseReq;
 import com.tencent.mm.sdk.openapi.BaseResp;
 import com.tencent.mm.sdk.openapi.ConstantsAPI;
@@ -36,7 +37,9 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.entry);
-        
+
+		Stetho.initializeWithDefaults(this);
+
     	api = WXAPIFactory.createWXAPI(this, Constants.APP_ID, false);
 
     	regBtn = (Button) findViewById(R.id.reg_btn);

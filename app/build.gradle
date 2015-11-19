@@ -22,7 +22,6 @@ android {
 
         debug {
 
-
         }
 
         release {
@@ -37,4 +36,9 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile files('libs/libammsdk.jar')
+
+    // for debugge
+    compile 'com.facebook.stetho:stetho:1.2.0'
+
+
 }
